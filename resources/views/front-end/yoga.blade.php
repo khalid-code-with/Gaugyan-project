@@ -15,7 +15,7 @@
         <h1>Yoga & Fitness</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{ route('homepage') }}">Home</a></li>
             </ol>
         </nav>
       </div>

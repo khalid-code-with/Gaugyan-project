@@ -65,7 +65,7 @@
         <h1>Geeta,VedPuran & Spiritual Content</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{ route('homepage') }}">Home</a></li>
             </ol>
         </nav>
       </div>
@@ -101,12 +101,7 @@
               <a href="https://youtu.be/sA6QQ7qFGTQ?si=TOLSg6sjE1jU9Q7P"class="glightbox pulsating-play-btn ms-2 me-2 d-inline-flex align-items-center">
                 <span class="play"><i class="bi bi-play-fill fs-4"></i></span>
               </a>
-              
               भैरव बाबा मंदिर महंत जस्सू महाराज ने भैरव बाबा के<br> शराब चढ़ने की परंपरा पर बताई अनोखी बात
-
-
-
-
             </p>
           </div>
         </div>
@@ -120,12 +115,7 @@
               <a href="https://youtu.be/DGIfF3xc-lE?si=E8HnSubw2rfpUeAV"class="glightbox pulsating-play-btn ms-2 me-2 d-inline-flex align-items-center">
                 <span class="play"><i class="bi bi-play-fill fs-4"></i></span>
               </a>
-              
               मीरा बाई के गुरुजी श्री मथुरा दास जी ने क्यों बोले कठोर शब्द
-
-
-
-
             </p>
           </div>
         </div>

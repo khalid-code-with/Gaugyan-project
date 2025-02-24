@@ -1,4 +1,4 @@
-@extends('front-end.Layout.maseter');
+@extends('front-end.Layout.maseter')
 @section("body-section")
   <style>
     /* Modal styles */
@@ -64,7 +64,7 @@
         <h1>Concept Of GauGyan</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{ route('homepage') }}">Home</a></li>
             </ol>
         </nav>
       </div>

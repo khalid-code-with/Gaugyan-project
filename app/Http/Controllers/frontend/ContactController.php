@@ -8,7 +8,7 @@ use App\Models\Gaugyan_store_data;
 
 class ContactController extends Controller
 {
-    function userdata(Request $req)
+    public function userdata(Request $req)
     {
         $table = new Gaugyan_store_data();
         $table->name = $req->name;
@@ -16,8 +16,9 @@ class ContactController extends Controller
         $table->subject = $req->subject;
         $table->message = $req->message;
         $table->save();   
-        return redirect('/'); // after submit the data again redirct on home page
+        return redirect()->route('contact_page')->with('send', ' Your Data  sent is successfully');
     }
+    
 }
 
 

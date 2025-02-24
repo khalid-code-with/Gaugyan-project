@@ -41,7 +41,7 @@
         <a href="#">My Enquiry</a>
         <a href="#">My Orders</a>
         <a href="privacy_policy.html">Privacy Policy</a>   -->
-        <a href="refer_and_earn.html">Refer & Earn</a>
+        <a href="{{route("refer_and_earn")}}">Refer & Earn</a>
         <a href="javascript:void(0)" onclick="shareGauGyan()">Share GauGyan</a>
         <!-- Link to open the modal -->
        <a href="#" id="openModal">Help & Support</a>
@@ -76,7 +76,7 @@
       }
     });
   </script>
-        <a href="concept.html">Concept Of GauGyan</a>
+        <a href="{{route("Concept_gaugyan")}}">Concept Of GauGyan</a>
       </div>
     
      <span style="font-size:30px;cursor:pointer"class="sidebar_three_dots" onclick="openNav()">&#9776; </span>

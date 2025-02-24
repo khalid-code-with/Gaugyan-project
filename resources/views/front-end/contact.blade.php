@@ -80,6 +80,7 @@
 <body class="index-page">
 <main class="main">
 
+
   <!-- Page Title -->
   <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg1.jpg);">
     <div class="container position-relative">
@@ -92,9 +93,17 @@
         </ol>
       </nav>
     </div>
-  </div><!-- End Page Title -->
+  </div>
+  <!-- End Page Title -->
+  @if(session('send'))
+  <div id="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ session('send') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+@endif
 
 <!-- Contact Section -->
+
 <section id="contact" class="contact section">
 
 <div class="c" style="background-color: rgb(254, 155, 63); margin:auto"; data-aos="fade">
@@ -156,8 +165,8 @@
           </iframe>
        
       </div>
-
     </div>
+
 
     <div class="col-lg-8">
       <form action="storedata" method="post" role="form" class="php-email-form"id="addBlog">
@@ -189,6 +198,7 @@
   </div>
 </div>
 </section>
+
 </main> 
 
 <script>
@@ -228,11 +238,21 @@
         error.insertAfter(element);
       },
       submitHandler: function (form) {
-        alert("Thank you! Your message has been submitted successfully.");
+        alert("Are you send your data");
         form.submit();
       },
       
     });
+
+    // shwo the message on top only for 5 second 
+  $(document).ready(function () {
+      setTimeout(function () {
+          $("#successMessage").fadeOut("slow");
+      }, 5000);
+  });
+
   });
 </script>
+
 @endsection
+  

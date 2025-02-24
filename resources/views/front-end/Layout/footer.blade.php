@@ -57,9 +57,8 @@
   
                <!-- Feedback button moved to center of the right side -->
                <div class="col-lg-2 col-md-1 text-center mt-4 d-flex align-items-center justify-content-end ms-auto feedback-button-container">
-                <a href="feedback.html" class="feedback-button"><b>Click Here for Feedback and Enquiry</b></a>
+                <a href="{{ route('feedback') }}" class="feedback-button"><b>Click Here for Feedback and Enquiry</b></a>
               </div>
-                
             </div>
         </div>
     </div>
