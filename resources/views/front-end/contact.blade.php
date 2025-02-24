@@ -1,7 +1,26 @@
 @extends('front-end.Layout.maseter')
 @section("body-section")
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!-- jQuery Validation Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
+          integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
   <style>
-    /* Modal styles */
     .modal {
       display: none;
       position: fixed;
@@ -48,13 +67,17 @@
      .contact-info a:hover {
       color: #FF4500;
     }
+    /* this is show the validation error  */
+    .error {
+      color:#FFFFFF; 
+      font-size: 15px;
+     position: relative;
+     top: 5px;
+    }
   </style>
 </head>
 
 <body class="index-page">
-
-
-
 <main class="main">
 
   <!-- Page Title -->
@@ -64,7 +87,7 @@
      
       <nav class="breadcrumbs">
         <ol>
-          <li><a href="home.html">Home</a></li>
+          <li><a href="{{ route('homepage') }}">Home</a></li>
           <li class="current">Contact</li>
         </ol>
       </nav>
@@ -73,8 +96,6 @@
 
 <!-- Contact Section -->
 <section id="contact" class="contact section">
-
-    
 
 <div class="c" style="background-color: rgb(254, 155, 63); margin:auto"; data-aos="fade">
 
@@ -139,20 +160,21 @@
     </div>
 
     <div class="col-lg-8">
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+      <form action="storedata" method="post" role="form" class="php-email-form"id="addBlog">
+        @csrf
         <div class="row">
           <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="" style="color: black;">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"  style="color: black;">
           </div>
           <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control email_control_form " name="email" id="email" placeholder="Your Email" required="" style="color: black;">
+            <input type="email" class="form-control email_control_form " name="email" id="email" placeholder="Your Email"  style="color: black;">
           </div>
         </div>
         <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required=""  style="color: black;">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"   style="color: black;">
         </div>
         <div class="form-group mt-3">
-          <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
+          <textarea class="form-control" name="message" placeholder="Message" ></textarea>
         </div>
         <div class="my-3">
           <div class="loading">Loading</div>
@@ -162,16 +184,55 @@
         <div class="text-center">
           <button type="submit" class="btn btn-primary">Send Message</button>
       </div>
-       
-        
       </form>
     </div><!-- End Contact Form -->
-
   </div>
-
 </div>
+</section>
+</main> 
 
-</section><!-- /Contact Section -->
-
-</main>
+<script>
+  $(document).ready(function () {
+    $("#addBlog").validate({
+      rules: {
+        name: {
+          required: true,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+        subject: {
+          required: true,
+        },
+        message:{
+          required: true,
+      }
+      },
+      messages: {
+        name: {
+          required: "Please enter your name",
+        },
+        email: {
+          required: "Please enter your email",
+          email:   "Please enter your correct email",
+        },
+        subject: {
+          required: "Please Enter your subject",
+        },
+        message:{
+          required: "Please Enter your message",
+        }
+      },
+      errorPlacement: function (error, element) {
+        error.insertAfter(element);
+      },
+      submitHandler: function (form) {
+        alert("Thank you! Your message has been submitted successfully.");
+        form.submit();
+      },
+      
+    });
+  });
+</script>
 @endsection
