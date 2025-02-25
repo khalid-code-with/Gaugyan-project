@@ -1,5 +1,7 @@
 @extends('front-end.Layout.maseter')
 @section("body-section")
+@section('title', 'Gaugyan | Refer and Earn')
+
   <style>
 .main {
     display: flex;
@@ -73,10 +75,6 @@ button:hover {
 </head>
 
 <body class="index-page">
-
-  
-
-
   <main class="main">
 
     <div class="container1">

@@ -1,5 +1,6 @@
 @extends('front-end.Layout.maseter')
 @section("body-section")
+@section('title', 'Gaugyan | Great Personalities & Places')
   <style>
     /* Modal styles */
     .modal {

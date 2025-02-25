@@ -1,6 +1,6 @@
 @extends('front-end.Layout.maseter')
 @section("body-section")
-
+@section('title', 'Gaugyan | Contact')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -201,6 +201,7 @@
 
 </main> 
 
+
 <script>
   $(document).ready(function () {
     $("#addBlog").validate({
@@ -238,21 +239,18 @@
         error.insertAfter(element);
       },
       submitHandler: function (form) {
+        // e.preventDefault();
         alert("Are you send your data");
         form.submit();
       },
       
     });
-
-    // shwo the message on top only for 5 second 
-  $(document).ready(function () {
+    
       setTimeout(function () {
           $("#successMessage").fadeOut("slow");
       }, 5000);
   });
 
-  });
 </script>
-
 @endsection
   

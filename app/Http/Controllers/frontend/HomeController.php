@@ -34,7 +34,19 @@ class HomeController extends Controller
         return view("front-end.contact");   // contacts page
     }
    
-    // store page addd here
     
+
+    //wallet and voucher and refer and earn in for three at homepage
+    
+    function wallet() 
+    {
+        return view("front-end.wallet");   // for wallet view
+       
+    }
+
+    function voucher() 
+    {
+        return view("front-end.vouchers");   //for voucher
+    }
    
 }

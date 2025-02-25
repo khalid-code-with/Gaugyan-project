@@ -1,5 +1,6 @@
 @extends('front-end.Layout.maseter')
 @section("body-section")
+@section('title', 'Gaugyan | Yoga & Fitness')
 
 
 <body class="index-page">

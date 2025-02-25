@@ -1,6 +1,7 @@
 @extends('front-end.Layout.maseter')
 @section("body-section")
- 
+@section('title', 'Gaugyan | Sanatan Valus & Culture')
+
 </head>
 
 <body class="index-page">

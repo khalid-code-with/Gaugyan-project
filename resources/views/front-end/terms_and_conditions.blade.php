@@ -1,7 +1,7 @@
 
 @extends('front-end.Layout.maseter')
 @section("body-section")
-
+@section('title', 'Gaugyan | Terms  & Condition')
 <body class="index-page">
   <main class="main">
 

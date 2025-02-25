@@ -15,13 +15,23 @@ Route::get('/Services_pages', [HomeController::class, 'Services_page'])->name('s
 Route::get('/nearestgoshala', [HomeController::class,'nearestgoshala'])->name("nearest_goshala");  //nearest goshala page 
 Route::get('/Contact_page', [HomeController::class,'Contact_us'])->name('contact_page');  //contacts  page 
 
+
 // ------=====//
 Route::post('storedata', [ContactController::class,'userdata']);// store user data of contact page at this route
 //------///
 
+
+//====wallet and voucher and refer and earn in for three at homepage
+Route::get('/wallet', [HomeController::class,'wallet'])->name('wallet');  //for wallet page
+Route::get('/voucher', [HomeController::class,'voucher'])->name('voucher');  //for voucher page
+
+
+
+
 // here footer links controller available here
 //===== Use full page in footer
 Route::get('/Term_and_condition_page', [FooterLinksController::class,'Term_and_condition'])->name("term_condition");  //term and condition page 
+
 
 //====== Policies & Terms include in footer part
 Route::get('/Privacy_and_policy_page', [FooterLinksController::class,'Privacy_and_policy'])->name("Privacy_policy");  //privacy and policy 
@@ -31,12 +41,14 @@ Route::get('/Shipping_policy_page', [FooterLinksController::class,'Shipping_poli
 Route::get('/Return_policy_page', [FooterLinksController::class,'Return_policy'])->name("Return_policy");  //shipping policy
 
 
+
 //====== Our Services include in footer part
 Route::get('/Cow_holistic_page', [FooterLinksController::class,'Cow_holistic'])->name("cow_holistic_part");  //Cow Holistic View
 Route::get('/Healing_part', [FooterLinksController::class,'Healing_page'])->name("headings");  //Healing page View
 Route::get('/Santana_part', [FooterLinksController::class,'Santana_page'])->name("santana");  //santana page 
 Route::get('/geeta_part', [FooterLinksController::class,'geeta_page'])->name("geeta");  //geeta page 
 Route::get('/yoga_part', [FooterLinksController::class,'yoga_page'])->name("yoga");  //yoga $ fitness page 
+
 
 
 
@@ -49,9 +61,11 @@ Route::get('/exam_content_scholarship_part', [FooterLinksController::class,'exam
 
 
 
+
 //======= this controller define for feedback in our project
 Route::get('/feedback', [FeedbackController::class,'feedback'])->name("feedback");  //this controller define for feedback
 Route::post('/feedback_storedata', [FeedbackStoredataController::class,'feedbackstoredata']);  //this controller define for feedback
+
 
 
 //====== this is include refer and earn and concept of gaugyan

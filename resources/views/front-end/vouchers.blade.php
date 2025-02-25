@@ -1,8 +1,7 @@
-@extends('front-end.Layout.maseter');
+@extends('front-end.Layout.maseter')
 @section("body-section")
-  <style>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-  </style>
+@section('title', 'Gaugyan | Voucher')
+
 </head>
 
 <body class="index-page">

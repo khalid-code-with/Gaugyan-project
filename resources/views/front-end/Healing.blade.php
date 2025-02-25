@@ -1,5 +1,7 @@
 @extends('front-end.Layout.maseter')
 @section("body-section")
+@section('title', 'Gaugyan | Healing & Meditation')
+
   <style>
     /* Modal styles */
     .modal {

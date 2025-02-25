@@ -1,5 +1,6 @@
 @extends('front-end.Layout.maseter')
 @section('body-section')
+@section('title', 'Gaugyan | Feedback Form')
     <!-- jQuery Library -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -49,12 +50,13 @@
             background-color: #218838;
         }
 
-        .error {
-            color: red;
-            font-size: 15px;
-            display: block; 
-        }
-
+    
+        .error {  
+    color: #D32F2F;  
+    font-size: 15px;  
+    display: block;  
+    margin-top: -7px;
+}
     </style>
     </head>
 
@@ -115,7 +117,7 @@
                             maxlength: "Phone number must not exceed 15 digits"
                         },
                         message: {
-                            required: "Please Enter your message",
+                            required: "Please enter your feedback.",
                         }
                     },
                     errorPlacement: function(error, element) {

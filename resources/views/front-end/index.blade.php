@@ -1,6 +1,7 @@
 
  @extends('front-end.Layout.maseter')
  @section("body-section")
+ @section('title', 'Gaugyan | Home ')
   <main class="main">
 
     <!-- Hero Section -->
@@ -129,9 +130,10 @@
     </section><!-- /About 3 Section -->
   </section><!-- /Recent Posts Section -->
     <div class="buttons-container">
-      <button class="btn" onclick="window.location.href='wallet.html'">Wallet</button>
-      <button class="btn" onclick="window.location.href='vouchers.html'">Voucher</button>
-      <button class="btn" onclick="window.location.href='refer_and_earn.html'">Refer & Earn</button>
+      <button class="btn" onclick="window.location.href='{{route("wallet")}}'">Wallet</button>
+      <button class="btn" onclick="window.location.href='{{route("voucher")}}'">Voucher</button>
+      <button class="btn" onclick="window.location.href='{{ route("refer_and_earn") }}'"> Refer & Earn</button>
+    
   </div>
 </main>
 @endsection

@@ -1,6 +1,6 @@
 @extends('front-end.Layout.maseter')
 @section("body-section")
-  
+@section('title', 'Gaugyan | Social Welfare ')
 </head>
 
 <body class="index-page">
