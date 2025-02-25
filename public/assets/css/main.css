@@ -116,6 +116,10 @@ h6 {
   position: relative;
   top: 1vh !important;
 }
+/* gives the border redius of logo  */
+#border-redius_logo{
+  border-radius: 4px;
+}
 
 /* make the navbar icons in a center from top */
 .mobile-nav-toggle{

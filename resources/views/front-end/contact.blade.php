@@ -238,12 +238,12 @@
       errorPlacement: function (error, element) {
         error.insertAfter(element);
       },
-      submitHandler: function (form) {
-        // e.preventDefault();
+      submitHandler: function (form,e) {
+        e.preventDefault();
         alert("Are you send your data");
         form.submit();
       },
-      
+     
     });
     
       setTimeout(function () {

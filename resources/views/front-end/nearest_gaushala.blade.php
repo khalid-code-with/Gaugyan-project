@@ -143,5 +143,39 @@ button:hover {
     <section id="results">
         <!-- Results will be displayed here -->
     </section>
+    <script>
+    // Sample data for Gaushalas
+    const gaushalas = [
+        { name: "Shri Ram Gaushala", state: "Rajasthan", city: "Jaipur" },
+        { name: "Gokul Gaushala", state: "Maharashtra", city: "Pune" },
+        { name: "Krishna Gaushala", state: "Rajasthan", city: "Jodhpur" },
+        { name: "Shiv Gaushala", state: "Uttar Pradesh", city: "Lucknow" }
+    ];
+
+    // Function to filter and display Gaushalas based on state and city
+    function searchGaushalas() {
+        const state = document.getElementById('state').value;
+        const city = document.getElementById('city').value;
+        const resultsContainer = document.getElementById('results');
+        
+        // Clear previous results
+        resultsContainer.innerHTML = '';
+
+        // Filter Gaushalas
+        const filteredGaushalas = gaushalas.filter(g => g.state === state && g.city === city);
+
+        // Display results
+        if (filteredGaushalas.length > 0) {
+            filteredGaushalas.forEach(g => {
+                const div = document.createElement('div');
+                div.textContent = g.name;
+                resultsContainer.appendChild(div);
+            });
+        } else {
+            resultsContainer.textContent = 'No Gaushalas found for the selected state and city.';
+        }
+    }
+</script>
+
 </main>
 @endsection

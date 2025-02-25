@@ -80,8 +80,8 @@
       </div>
     
      <span style="font-size:30px;cursor:pointer"class="sidebar_three_dots" onclick="openNav()">&#9776; </span>
-      <a href="index.html">
-        <img src="assets/img/one.jpg" alt="Logo" class="sidenav-logo"> </a>
+      <a href="{{ route('homepage') }}">
+        <img src="assets/img/one.jpg" alt="Logo" class="sidenav-logo" id="border-redius_logo"> </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="{{ route('homepage') }}"class="active">Home</a></li>
