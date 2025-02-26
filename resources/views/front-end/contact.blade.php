@@ -102,6 +102,8 @@
   </div>
 @endif
 
+
+
 <!-- Contact Section -->
 
 <section id="contact" class="contact section">
@@ -198,9 +200,7 @@
   </div>
 </div>
 </section>
-
 </main> 
-
 
 <script>
   $(document).ready(function () {
@@ -243,7 +243,7 @@
         alert("Are you send your data");
         form.submit();
       },
-     
+
     });
     
       setTimeout(function () {
