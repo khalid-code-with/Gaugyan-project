@@ -27,7 +27,8 @@ class ContactController extends Controller
         ];
 
         
-        Mail::to($req->email)->send(new WelcomeEmail($data));
+        // Mail::to($req->email)->send(new WelcomeEmail($data));
+        Mail::to('khalid70428khan@gmail.com')->send(new WelcomeEmail($data));
 
         return redirect()->route('contact_page')->with('send', 'Your Data sent successfully');
     }
