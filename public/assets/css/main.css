@@ -1934,9 +1934,10 @@ section,
 
 .contact .info {
   background-color: var(--surface-color);
-  padding: 40px;
+  padding: 40px !important;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+ 
 }
 
 .contact .info h3 {
@@ -1948,6 +1949,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin-bottom: 30px;
   font-size: 15px;
+
 }
 
 .contact .info-item+.info-item {
@@ -1978,7 +1980,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 .map_controlling{
- width: 400px;
+ width: 450px;
  position: relative;
  height: 400px;
  left: -7vh;

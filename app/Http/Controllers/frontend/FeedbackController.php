@@ -12,4 +12,5 @@ class FeedbackController extends Controller
     {
         return view("front-end.feedback");
     }
+    
 }

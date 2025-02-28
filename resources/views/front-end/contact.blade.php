@@ -1,7 +1,6 @@
 @extends('front-end.Layout.maseter')
 @section("body-section")
 @section('title', 'Gaugyan | Contact')
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,7 +100,6 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 @endif
-
 
 
 <!-- Contact Section -->

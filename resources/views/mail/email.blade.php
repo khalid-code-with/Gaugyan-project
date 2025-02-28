@@ -167,7 +167,7 @@
     <div class="container">
         <div class="header-container">
             <div class="header" style="float: none; text-align: center; margin-top: 0px; 
-    background: url('{{ URL::to('/') }}') repeat center center; max-width: 620px; 
+    background: url('{{ URL::to('/') }}') repeat center center; max-width:620px; 
     border: 1px solid #f0f0f0; margin: 0 0; padding: 15px;">
                 <img src="https://pedestaltechnoworld.com/storage/logos/267791692517601.png" width="180" alt="">
             </div>
